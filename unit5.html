@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit 5 - File Handling</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Prism Theme -->
+    <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" rel="stylesheet" />
+
+    <style>
+        .content-box {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        h2 { color: #00ffd5; }
+
+        .quiz-box {
+            background: rgba(0,0,0,0.6);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        .btn {
+            padding: 10px 15px;
+            background: #00c6ff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+<div class="overlay"></div>
+
+<header>
+    <h2>📓 Unit 5: File Handling</h2>
+    <nav>
+        <a href="index.html">Back</a>
+    </nav>
+</header>
+
+<!-- THEORY -->
+<div class="content-box section">
+    <h2>What is File Handling?</h2>
+    <p>
+        File handling is used to store data permanently in a file instead of temporary memory.
+        It allows programs to read, write, and modify data stored in files.
+    </p>
+</div>
+
+<div class="content-box section">
+    <h2>File Modes</h2>
+    <ul>
+        <li><b>"r"</b> → Read file</li>
+        <li><b>"w"</b> → Write (overwrites file)</li>
+        <li><b>"a"</b> → Append (adds data)</li>
+    </ul>
+</div>
+
+<div class="content-box section">
+    <h2>Why File Handling?</h2>
+    <ul>
+        <li>✔ Store data permanently</li>
+        <li>✔ Useful for real applications</li>
+        <li>✔ Handles large data efficiently</li>
+    </ul>
+</div>
+
+<!-- CODE -->
+<div class="content-box section">
+
+    <h2>Example Programs 💻</h2>
+
+    <div class="tabs">
+        <button class="tab-btn active" onclick="showCode('code1', this)">Write File</button>
+        <button class="tab-btn" onclick="showCode('code2', this)">Read File</button>
+        <button class="tab-btn" onclick="showCode('code3', this)">Append File</button>
+    </div>
+
+    <!-- WRITE -->
+    <div id="code1" class="code-container">
+<pre><code class="language-python" id="codeText1">
+file = open("data.txt", "w")
+file.write("Hello Python")
+file.close()
+</code></pre>
+        <button class="copy-btn" onclick="copyCode('codeText1')">📋 Copy</button>
+    </div>
+
+    <!-- READ -->
+    <div id="code2" class="code-container" style="display:none;">
+<pre><code class="language-python" id="codeText2">
+file = open("data.txt", "r")
+print(file.read())
+file.close()
+</code></pre>
+        <button class="copy-btn" onclick="copyCode('codeText2')">📋 Copy</button>
+    </div>
+
+    <!-- APPEND -->
+    <div id="code3" class="code-container" style="display:none;">
+<pre><code class="language-python" id="codeText3">
+file = open("data.txt", "a")
+file.write("\nNew Line Added")
+file.close()
+</code></pre>
+        <button class="copy-btn" onclick="copyCode('codeText3')">📋 Copy</button>
+    </div>
+
+    <br>
+    <a href="https://www.programiz.com/python-programming/online-compiler"
+       target="_blank"
+       class="run-btn">
+       ▶ Run Code
+    </a>
+
+</div>
+
+<!-- QUIZ -->
+<div class="quiz-box section">
+    <h2>Quick Quiz 🧠</h2>
+
+    <p>Which mode is used to read a file?</p>
+    <input type="radio" name="q" value="a"> w<br>
+    <input type="radio" name="q" value="b"> r<br>
+    <input type="radio" name="q" value="c"> a<br>
+
+    <br><br>
+
+    <p>Which mode adds data without deleting old content?</p>
+    <input type="radio" name="q2" value="a"> w<br>
+    <input type="radio" name="q2" value="b"> r<br>
+    <input type="radio" name="q2" value="c"> a<br>
+
+    <br>
+    <button class="btn" onclick="checkQuiz('b')">Submit</button>
+</div>
+
+<!-- COMPLETE -->
+<div class="section" style="text-align:center;">
+    <button class="btn" onclick="markComplete(5)">Mark as Completed ✅</button>
+</div>
+
+<div class="section nav-buttons">
+    <a href="unit4.html" class="btn">⬅ Previous</a>
+    <a href="home.html" class="btn">Next ▶</a>
+</div>
+
+<footer>
+    <p>© 2026 Vatsal 💻</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

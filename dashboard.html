@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .dashboard-box {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        h2 { color: #00ffd5; }
+
+        .progress-container {
+            width: 80%;
+            margin: 20px auto;
+            background: #333;
+            border-radius: 20px;
+        }
+
+        .progress-bar {
+            height: 20px;
+            width: 0%;
+            background: #00ffcc;
+            border-radius: 20px;
+        }
+
+        .btn {
+            padding: 10px 15px;
+            background: #00c6ff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+<div class="overlay"></div>
+
+<header>
+    <h2>📊 Dashboard</h2>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="index.html">Courses</a>
+    </nav>
+</header>
+
+<!-- USER INFO -->
+<div class="dashboard-box section">
+    <h2 id="usernameDisplay">Welcome 👋</h2>
+</div>
+
+<!-- PROGRESS -->
+<div class="dashboard-box section">
+    <h2>Course Progress</h2>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <p id="progressText">0% Completed</p>
+</div>
+
+<!-- XP -->
+<div class="dashboard-box section">
+    <h2>XP Points ⚡</h2>
+    <p id="xp">0 XP</p>
+</div>
+
+<!-- BADGE -->
+<div class="dashboard-box section">
+    <h2>Your Badge 🏆</h2>
+    <p id="badge">Beginner</p>
+</div>
+
+<!-- ACTION -->
+<div class="dashboard-box section">
+    <button class="btn" onclick="continueLearning()">Continue Learning ▶</button>
+    <button class="btn" onclick="resetProgress()">Reset Progress 🔄</button>
+</div>
+
+<footer>
+    <p>© 2026 Vatsal 💻</p>
+</footer>
+
+<script>
+window.onload = function () {
+    let name = localStorage.getItem("userName") || "User";
+    document.getElementById("usernameDisplay").innerText = "Welcome " + name + " 👋";
+
+    let progress = JSON.parse(localStorage.getItem("progress")) || [];
+
+    let percent = (progress.length / 5) * 100;
+    document.getElementById("progressBar").style.width = percent + "%";
+    document.getElementById("progressText").innerText = percent + "% Completed";
+
+    let xp = progress.length * 10;
+    document.getElementById("xp").innerText = xp + " XP";
+
+    let badge = "Beginner 🟢";
+    if (xp >= 30) badge = "Intermediate 🟡";
+    if (xp >= 50) badge = "Master 🔴";
+
+    document.getElementById("badge").innerText = badge;
+};
+
+// Continue learning
+function continueLearning() {
+    let progress = JSON.parse(localStorage.getItem("progress")) || [];
+
+    let next = 1;
+    for (let i = 1; i <= 5; i++) {
+        if (!progress.includes(i)) {
+            next = i;
+            break;
+        }
+    }
+
+    window.location.href = "unit" + next + ".html";
+}
+
+// Reset progress
+function resetProgress() {
+    localStorage.removeItem("progress");
+    alert("Progress reset!");
+    location.reload();
+}
+</script>
+
+</body>
+</html>

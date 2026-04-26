@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit 4 - Functions</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Prism Theme -->
+    <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" rel="stylesheet" />
+
+    <style>
+        .content-box {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        h2 { color: #00ffd5; }
+
+        .quiz-box {
+            background: rgba(0,0,0,0.6);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        .btn {
+            padding: 10px 15px;
+            background: #00c6ff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+<div class="overlay"></div>
+
+<header>
+    <h2>📕 Unit 4: Functions</h2>
+    <nav>
+        <a href="index.html">Back</a>
+    </nav>
+</header>
+
+<!-- THEORY -->
+<div class="content-box section">
+    <h2>What is a Function?</h2>
+    <p>
+        A function is a block of code that performs a specific task. It helps to reuse code,
+        reduce repetition and make programs more organized.
+    </p>
+</div>
+
+<div class="content-box section">
+    <h2>Advantages of Functions</h2>
+    <ul>
+        <li>✔ Code reusability</li>
+        <li>✔ Reduces complexity</li>
+        <li>✔ Improves readability</li>
+        <li>✔ Easier debugging</li>
+    </ul>
+</div>
+
+<div class="content-box section">
+    <h2>Types of Functions</h2>
+    <ul>
+        <li><b>Built-in functions</b> → print(), len()</li>
+        <li><b>User-defined functions</b> → created using def keyword</li>
+    </ul>
+</div>
+
+<div class="content-box section">
+    <h2>Function Syntax</h2>
+    <p>
+        Functions are defined using <b>def</b> keyword followed by function name and parentheses.
+    </p>
+</div>
+
+<!-- CODE -->
+<div class="content-box section">
+
+    <h2>Example Programs 💻</h2>
+
+    <div class="tabs">
+        <button class="tab-btn active" onclick="showCode('code1', this)">Simple Function</button>
+        <button class="tab-btn" onclick="showCode('code2', this)">With Parameters</button>
+        <button class="tab-btn" onclick="showCode('code3', this)">Return Value</button>
+    </div>
+
+    <!-- SIMPLE -->
+    <div id="code1" class="code-container">
+<pre><code class="language-python" id="codeText1">
+def greet():
+    print("Hello User")
+
+greet()
+</code></pre>
+        <button class="copy-btn" onclick="copyCode('codeText1')">📋 Copy</button>
+    </div>
+
+    <!-- PARAMETERS -->
+    <div id="code2" class="code-container" style="display:none;">
+<pre><code class="language-python" id="codeText2">
+def greet(name):
+    print("Hello", name)
+
+greet("Vanshu")
+</code></pre>
+        <button class="copy-btn" onclick="copyCode('codeText2')">📋 Copy</button>
+    </div>
+
+    <!-- RETURN -->
+    <div id="code3" class="code-container" style="display:none;">
+<pre><code class="language-python" id="codeText3">
+def add(a, b):
+    return a + b
+
+result = add(5, 3)
+print(result)
+</code></pre>
+        <button class="copy-btn" onclick="copyCode('codeText3')">📋 Copy</button>
+    </div>
+
+    <br>
+    <a href="https://www.programiz.com/python-programming/online-compiler"
+       target="_blank"
+       class="run-btn">
+       ▶ Run Code
+    </a>
+
+</div>
+
+<!-- QUIZ -->
+<div class="quiz-box section">
+    <h2>Quick Quiz 🧠</h2>
+
+    <p>Which keyword is used to define a function?</p>
+    <input type="radio" name="q" value="a"> function<br>
+    <input type="radio" name="q" value="b"> def<br>
+    <input type="radio" name="q" value="c"> fun<br>
+
+    <br><br>
+
+    <p>Which statement is used to return value?</p>
+    <input type="radio" name="q2" value="a"> give<br>
+    <input type="radio" name="q2" value="b"> return<br>
+    <input type="radio" name="q2" value="c"> print<br>
+
+    <br>
+    <button class="btn" onclick="checkQuiz('b')">Submit</button>
+</div>
+
+<!-- COMPLETE -->
+<div class="section" style="text-align:center;">
+    <button class="btn" onclick="markComplete(4)">Mark as Completed ✅</button>
+</div>
+
+<div class="section nav-buttons">
+    <a href="unit3.html" class="btn">⬅ Previous</a>
+    <a href="unit5.html" class="btn">Next ▶</a>
+</div>
+
+<footer>
+    <p>© 2026 Vatsal 💻</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

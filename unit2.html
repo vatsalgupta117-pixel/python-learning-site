@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit 2 - Variables & Data Types</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" rel="stylesheet" />
+
+    <style>
+        .content-box {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #00ffd5;
+        }
+
+        .quiz-box {
+            background: rgba(0,0,0,0.6);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        .btn {
+            padding: 10px 15px;
+            background: #00c6ff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+<div class="overlay"></div>
+
+<header>
+    <h2>📘 Unit 2: Variables & Data Types</h2>
+    <nav>
+        <a href="index.html">Back</a>
+    </nav>
+</header>
+
+<!-- VARIABLE THEORY -->
+<div class="content-box section">
+    <h2>What is a Variable?</h2>
+    <p>
+        A variable is a named memory location used to store data. In Python, variables are created
+        automatically when you assign a value to them. There is no need to declare the data type explicitly.
+    </p>
+
+    <p>
+        Variables make programs dynamic and flexible, allowing data to change during execution.
+    </p>
+
+    <h3>Rules for Naming Variables:</h3>
+    <ul>
+        <li>Must start with a letter or underscore</li>
+        <li>Cannot start with a number</li>
+        <li>Cannot use keywords (like if, else, for)</li>
+        <li>Case-sensitive (Name and name are different)</li>
+    </ul>
+</div>
+
+<!-- DATA TYPES -->
+<div class="content-box section">
+    <h2>Data Types in Python</h2>
+    <p>
+        Data types define the type of value a variable can store. Python automatically detects the data type.
+    </p>
+
+    <ul>
+        <li><b>int</b> → Whole numbers (10, 20)</li>
+        <li><b>float</b> → Decimal numbers (3.14, 2.5)</li>
+        <li><b>str</b> → Text ("Hello")</li>
+        <li><b>list</b> → Collection ([1,2,3])</li>
+        <li><b>bool</b> → True or False</li>
+    </ul>
+</div>
+
+<!-- TYPE CHECK -->
+<div class="content-box section">
+    <h2>Type Checking</h2>
+    <p>
+        Python provides <b>type()</b> function to check the data type of a variable.
+    </p>
+</div>
+
+<!-- CODE -->
+<div class="content-box section">
+
+    <h2>Example Programs 💻</h2>
+
+    <div class="tabs">
+        <button class="tab-btn active" onclick="showCode('code1', this)">Variables</button>
+        <button class="tab-btn" onclick="showCode('code2', this)">Data Types</button>
+        <button class="tab-btn" onclick="showCode('code3', this)">Type Check</button>
+    </div>
+
+    <!-- CODE 1 -->
+    <div id="code1" class="code-container">
+<pre><code class="language-python" id="codeText1">
+name = "Vanshu"
+age = 20
+print(name, age)
+</code></pre>
+        <button class="copy-btn" onclick="copyCode('codeText1')">📋 Copy</button>
+    </div>
+
+    <!-- CODE 2 -->
+    <div id="code2" class="code-container" style="display:none;">
+<pre><code class="language-python" id="codeText2">
+x = 10
+y = 3.5
+name = "Python"
+
+print(x, y, name)
+</code></pre>
+        <button class="copy-btn" onclick="copyCode('codeText2')">📋 Copy</button>
+    </div>
+
+    <!-- CODE 3 -->
+    <div id="code3" class="code-container" style="display:none;">
+<pre><code class="language-python" id="codeText3">
+x = 10
+y = 3.5
+name = "Python"
+
+print(type(x))
+print(type(y))
+print(type(name))
+</code></pre>
+        <button class="copy-btn" onclick="copyCode('codeText3')">📋 Copy</button>
+    </div>
+
+    <br>
+    <a href="https://www.programiz.com/python-programming/online-compiler"
+       target="_blank"
+       class="run-btn">
+       ▶ Run Code
+    </a>
+
+</div>
+
+<!-- QUIZ -->
+<div class="quiz-box section">
+    <h2>Quick Quiz 🧠</h2>
+
+    <p>Which data type is used for decimal numbers?</p>
+
+    <input type="radio" name="q" value="a"> int<br>
+    <input type="radio" name="q" value="b"> float<br>
+    <input type="radio" name="q" value="c"> string<br>
+
+    <br><br>
+
+    <p>Which function is used to check data type?</p>
+
+    <input type="radio" name="q2" value="a"> check()<br>
+    <input type="radio" name="q2" value="b"> typeof()<br>
+    <input type="radio" name="q2" value="c"> type()<br>
+
+    <br>
+    <button class="btn" onclick="checkQuiz('b')">Submit</button>
+</div>
+
+<!-- COMPLETE -->
+<div class="section" style="text-align:center;">
+    <button class="btn" onclick="markComplete(2)">Mark as Completed ✅</button>
+</div>
+
+<div class="section nav-buttons">
+    <a href="unit1.html" class="btn">⬅ Previous</a>
+    <a href="unit3.html" class="btn">Next ▶</a>
+</div>
+
+<footer>
+    <p>© 2026 Vatsal 💻</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

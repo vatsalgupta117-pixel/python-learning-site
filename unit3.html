@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit 3 - Control Statements</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Prism Theme -->
+    <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" rel="stylesheet" />
+
+    <style>
+        .content-box {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #00ffd5;
+        }
+
+        .quiz-box {
+            background: rgba(0,0,0,0.6);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        .btn {
+            padding: 10px 15px;
+            background: #00c6ff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+<div class="overlay"></div>
+
+<header>
+    <h2>📙 Unit 3: Control Statements</h2>
+    <nav>
+        <a href="index.html">Back</a>
+    </nav>
+</header>
+
+<!-- THEORY -->
+<div class="content-box section">
+    <h2>What are Control Statements?</h2>
+    <p>
+        Control statements are used to control the flow of execution of a program.
+        They help in decision making and repeating tasks.
+    </p>
+</div>
+
+<!-- IF ELSE -->
+<div class="content-box section">
+    <h2>Conditional Statements (if-else)</h2>
+    <p>
+        The if-else statement is used to execute code based on conditions.
+        If the condition is true, the "if" block runs, otherwise "else" block runs.
+    </p>
+</div>
+
+<!-- LOOPS -->
+<div class="content-box section">
+    <h2>Looping Statements</h2>
+    <p>
+        Loops are used to execute a block of code multiple times.
+    </p>
+
+    <ul>
+        <li><b>for loop</b> → used when number of iterations is known</li>
+        <li><b>while loop</b> → used when condition-based repetition is needed</li>
+    </ul>
+</div>
+
+<!-- CODE SECTION -->
+<div class="content-box section">
+
+    <h2>Example Programs 💻</h2>
+
+    <div class="tabs">
+        <button class="tab-btn active" onclick="showCode('code1', this)">If-Else</button>
+        <button class="tab-btn" onclick="showCode('code2', this)">For Loop</button>
+        <button class="tab-btn" onclick="showCode('code3', this)">While Loop</button>
+    </div>
+
+    <!-- IF ELSE -->
+    <div id="code1" class="code-container">
+<pre><code class="language-python" id="codeText1">
+age = 18
+
+if age >= 18:
+    print("Eligible to vote")
+else:
+    print("Not eligible")
+</code></pre>
+        <button class="copy-btn" onclick="copyCode('codeText1')">📋 Copy</button>
+    </div>
+
+    <!-- FOR LOOP -->
+    <div id="code2" class="code-container" style="display:none;">
+<pre><code class="language-python" id="codeText2">
+for i in range(5):
+    print(i)
+</code></pre>
+        <button class="copy-btn" onclick="copyCode('codeText2')">📋 Copy</button>
+    </div>
+
+    <!-- WHILE LOOP -->
+    <div id="code3" class="code-container" style="display:none;">
+<pre><code class="language-python" id="codeText3">
+i = 1
+
+while i <= 5:
+    print(i)
+    i += 1
+</code></pre>
+        <button class="copy-btn" onclick="copyCode('codeText3')">📋 Copy</button>
+    </div>
+
+    <br>
+    <a href="https://www.programiz.com/python-programming/online-compiler"
+       target="_blank"
+       class="run-btn">
+       ▶ Run Code
+    </a>
+
+</div>
+
+<!-- QUIZ -->
+<div class="quiz-box section">
+    <h2>Quick Quiz 🧠</h2>
+
+    <p>Which statement is used for decision making?</p>
+
+    <input type="radio" name="q" value="a"> loop<br>
+    <input type="radio" name="q" value="b"> if-else<br>
+    <input type="radio" name="q" value="c"> function<br>
+
+    <br><br>
+
+    <p>Which loop runs until condition becomes false?</p>
+
+    <input type="radio" name="q2" value="a"> for<br>
+    <input type="radio" name="q2" value="b"> while<br>
+    <input type="radio" name="q2" value="c"> do-while<br>
+
+    <br>
+    <button class="btn" onclick="checkQuiz('b')">Submit</button>
+</div>
+
+<!-- COMPLETE -->
+<div class="section" style="text-align:center;">
+    <button class="btn" onclick="markComplete(3)">Mark as Completed ✅</button>
+</div>
+
+<div class="section nav-buttons">
+    <a href="unit2.html" class="btn">⬅ Previous</a>
+    <a href="unit4.html" class="btn">Next ▶</a>
+</div>
+
+<footer>
+    <p>© 2026 Vatsal 💻</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

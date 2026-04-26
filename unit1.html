@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unit 1 - Introduction to Python</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" rel="stylesheet" />
+
+    <style>
+        .content-box {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            animation: fadeUp 1s ease;
+        }
+
+        h2 {
+            color: #00ffd5;
+        }
+
+        code {
+            background: black;
+            color: #00ffcc;
+            padding: 10px;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .quiz-box {
+            background: rgba(0,0,0,0.6);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        .btn {
+            padding: 10px 15px;
+            background: #00c6ff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+
+<body>
+
+<div class="bg"></div>
+<div class="overlay"></div>
+
+<header>
+    <h2>📗 Unit 1: Introduction to Python</h2>
+    <nav>
+        <a href="index.html">Back</a>
+    </nav>
+</header>
+
+<!-- SECTION 1 -->
+<div class="content-box section">
+    <h2>What is Python?</h2>
+    <p>
+        Python is a high-level, interpreted programming language created by Guido van Rossum in 1991.
+        It is easy to learn and widely used in web development, AI, data science and automation.
+    </p>
+</div>
+
+<!-- SECTION 2 -->
+<div class="content-box section">
+    <h2>Features of Python</h2>
+    <ul>
+        <li>✔ Simple and easy syntax</li>
+        <li>✔ Platform independent</li>
+        <li>✔ Open source</li>
+        <li>✔ Large libraries support</li>
+    </ul>
+</div>
+
+<!-- SECTION 3 -->
+<div class="content-box section">
+    <h2>Applications</h2>
+    <ul>
+        <li>Web Development</li>
+        <li>Machine Learning</li>
+        <li>Automation</li>
+        <li>Game Development</li>
+    </ul>
+</div>
+
+<!-- SECTION 4 -->
+<div class="content-box section">
+
+    <h2>Example Programs 💻</h2>
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <button class="tab-btn active" onclick="showCode('code1', this)">Example 1</button>
+        <button class="tab-btn" onclick="showCode('code2', this)">Example 2</button>
+    </div>
+
+    <!-- CODE 1 -->
+    <div id="code1" class="code-container">
+<pre><code class="language-python" id="codeText1">
+print("Hello Python")
+</code></pre>
+        <button class="copy-btn" onclick="copyCode('codeText1')">📋 Copy</button>
+    </div>
+
+    <!-- CODE 2 -->
+    <div id="code2" class="code-container" style="display:none;">
+<pre><code class="language-python" id="codeText2">
+name = input("Enter your name: ")
+print("Hello", name)
+</code></pre>
+        <button class="copy-btn" onclick="copyCode('codeText2')">📋 Copy</button>
+    </div>
+
+    <br>
+    <a href="https://www.programiz.com/python-programming/online-compiler"
+       target="_blank"
+       class="run-btn">
+       ▶ Run Code
+    </a>
+
+</div>
+
+<!-- QUIZ -->
+<div class="quiz-box section">
+    <h2>Quick Quiz 🧠</h2>
+
+    <p>Who developed Python?</p>
+
+    <input type="radio" name="q" value="a"> James Gosling<br>
+    <input type="radio" name="q" value="b"> Guido van Rossum<br>
+    <input type="radio" name="q" value="c"> Dennis Ritchie<br>
+
+    <br>
+    <button class="btn" onclick="checkQuiz('b')">Submit</button>
+</div>
+
+<!-- COMPLETE -->
+<div class="section" style="text-align:center;">
+    <button class="btn" onclick="markComplete(1)">Mark as Completed ✅</button>
+</div>
+
+<div class="section" style="text-align:center;">
+    <button class="btn" onclick="markComplete(2)">Mark as Completed ✅</button>
+</div>
+
+<div class="section nav-buttons">
+    <a href="index.html" class="btn">⬅ Previous</a>
+    <a href="unit3.html" class="btn">Next ▶</a>
+</div>
+
+<footer>
+    <p>© 2026 Vatsal 💻</p>
+</footer>
+
+<script src="script.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+</body>
+</html>
