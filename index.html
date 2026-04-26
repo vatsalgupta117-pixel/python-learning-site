@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Course Index</title>
+    <title>Python Learning</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 
 <body>
@@ -11,58 +12,47 @@
 <div class="overlay"></div>
 
 <header>
-    <h2>📘 Python Course</h2>
+    <h2>🐍 Python Learning</h2>
     <nav>
-        <a href="home.html">🏠 Home</a>
-        <a href="dashboard.html">📊 Dashboard</a>
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
     </nav>
 </header>
 
-<!-- XP + CONTINUE -->
+<!-- Typing Heading -->
 <div class="section">
-    <h2>🔥 Your Progress</h2>
-    <p id="xp">0 XP</p>
-
-    <div class="progress-container">
-        <div class="progress-bar" id="progressBar"></div>
-    </div>
-
-    <button onclick="continueLearning()">Continue Learning ▶</button>
+    <h1 id="typing"></h1>
 </div>
 
-<!-- UNIT CARDS -->
-<div class="unit-container">
+<!-- Cards -->
+<div class="section">
+    <h2>What You Will Learn 📚</h2>
 
-    <div class="unit-card" id="unit1">
-        <h3>Unit 1: Introduction</h3>
-        <p>Basics of Python and its uses</p>
-        <a href="unit1.html">Start</a>
+    <div class="cards">
+        <div class="card c1">Python Basics</div>
+        <div class="card c2">Variables</div>
+        <div class="card c3">Control Statements</div>
+        <div class="card c4">Functions</div>
+        <div class="card c5">File Handling</div>
     </div>
+</div>
 
-    <div class="unit-card" id="unit2">
-        <h3>Unit 2: Variables</h3>
-        <p>Learn data storage and types</p>
-        <a href="unit2.html">Start</a>
-    </div>
+<!-- Name -->
+<div class="section">
+    <input type="text" id="username" placeholder="Enter your name">
+    <button onclick="saveName()">Save</button>
+    <h3 id="welcome"></h3>
+</div>
 
-    <div class="unit-card" id="unit3">
-        <h3>Unit 3: Control Statements</h3>
-        <p>Decision making & loops</p>
-        <a href="unit3.html">Start</a>
-    </div>
+<!-- Progress -->
+<div class="section">
+    <h2>Progress 📊</h2>
+    <p id="progressText">0%</p>
+</div>
 
-    <div class="unit-card" id="unit4">
-        <h3>Unit 4: Functions</h3>
-        <p>Reusable code blocks</p>
-        <a href="unit4.html">Start</a>
-    </div>
-
-    <div class="unit-card" id="unit5">
-        <h3>Unit 5: File Handling</h3>
-        <p>Work with files</p>
-        <a href="unit5.html">Start</a>
-    </div>
-
+<!-- Start -->
+<div class="section">
+    <button onclick="startLearning()">Start Learning 🚀</button>
 </div>
 
 <footer>
