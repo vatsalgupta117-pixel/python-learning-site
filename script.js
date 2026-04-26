@@ -56,15 +56,20 @@ function loadProgress() {
     progressText.innerText = percent + "% Completed";
 }
 
-// Mark Complete
+// ✅ FIXED Mark Complete (NO DUPLICATE + SORT)
 function markComplete(unit) {
     let progress = JSON.parse(localStorage.getItem("progress")) || [];
 
     if (!progress.includes(unit)) {
         progress.push(unit);
-        localStorage.setItem("progress", JSON.stringify(progress));
-        alert("Unit " + unit + " completed!");
     }
+
+    // remove duplicates + sort
+    progress = [...new Set(progress)].sort((a, b) => a - b);
+
+    localStorage.setItem("progress", JSON.stringify(progress));
+
+    alert("Unit " + unit + " completed!");
 }
 
 // Quiz
@@ -83,9 +88,11 @@ function checkQuiz(correct) {
     }
 }
 
-// Continue Learning (🔥 FIXED)
+// ✅ FIXED Continue Learning (NO SKIP BUG)
 function continueLearning() {
     let progress = JSON.parse(localStorage.getItem("progress")) || [];
+
+    progress = [...new Set(progress)].sort((a, b) => a - b);
 
     let next = 1;
 
@@ -125,7 +132,7 @@ function copyCode(id) {
     alert("Copied! 📋");
 }
 
-// Update UI (SAFE VERSION)
+// Update UI
 function updateUI() {
     let progress = JSON.parse(localStorage.getItem("progress")) || [];
     let xp = progress.length * 10;
@@ -156,7 +163,7 @@ function updateUI() {
     }
 }
 
-// On Load (SAFE)
+// On Load
 window.onload = function () {
     typeEffect();
     loadProgress();
